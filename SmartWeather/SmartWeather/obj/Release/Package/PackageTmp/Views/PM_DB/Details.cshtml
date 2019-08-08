@@ -1,0 +1,82 @@
+﻿@model SmartWeather.PM_DB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PM_DB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ThingName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThingName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dust)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dust)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AQI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AQI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PM_PK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

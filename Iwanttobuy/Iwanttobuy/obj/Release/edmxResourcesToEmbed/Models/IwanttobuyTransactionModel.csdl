@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="topicsmartdeviceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IwanttobuyTransaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Line_IG_Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Necklace" Type="Int32" />
+    <Property Name="Bracelet" Type="Int32" />
+    <Property Name="Earring" Type="Int32" />
+    <Property Name="Hairpin" Type="Int32" />
+    <Property Name="Ring" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Datetobuy" Type="DateTime" Precision="3" Nullable="false" />
+    <Property Name="TotalPrice" Type="Int32" />
+    <Property Name="ProductState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="IwanttobuyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IwanttobuyTransactions" EntityType="Self.IwanttobuyTransaction" />
+    <EntitySet Name="IwanttobuyCustomers" EntityType="topicsmartdeviceModel.IwanttobuyCustomer" />
+  </EntityContainer>
+  <EntityType Name="IwanttobuyCustomer">
+    <Key>
+      <PropertyRef Name="CustomerPK" />
+    </Key>
+    <Property Name="CustomerPK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerSurname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="Binary" MaxLength="200" FixedLength="true" />
+    <Property Name="CustomerType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="512" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+    <Property Name="NoOfLogin" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

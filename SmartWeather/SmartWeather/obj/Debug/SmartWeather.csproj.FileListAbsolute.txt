@@ -1,0 +1,132 @@
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\ApplicationInsights.config
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\csc.exe
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\vbc.exe
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\VBCSCompiler.exe
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\SmartWeather.dll.config
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\SmartWeather.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\SmartWeather.pdb
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EntityFramework.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EntityFramework.SqlServer.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\M2Mqtt.Net.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.Web.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.ApplicationInsights.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\MqttLib.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Newtonsoft.Json.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Net.Http.Formatting.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Helpers.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Http.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Http.WebHost.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Mvc.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Razor.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.Deployment.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.Razor.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EntityFramework.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EntityFramework.SqlServer.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\M2Mqtt.Net.pdb
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.Web.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.ApplicationInsights.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Newtonsoft.Json.pdb
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\Newtonsoft.Json.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Net.Http.Formatting.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Http.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Http.WebHost.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Razor.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.Deployment.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Webpages.Razor.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Helpers.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\System.Web.Mvc.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\obj\Debug\SmartWeather.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\obj\Debug\SmartWeather.pdb
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EPPlus.dll
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\bin\EPPlus.xml
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csprojAssemblyReference.cache
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csproj.CoreCompileInputs.cache
+C:\Users\silak\Documents\Visual Studio 2015\Projects\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csproj.CopyComplete
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\ApplicationInsights.config
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\csc.exe
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\System.Collections.Immutable.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\System.Reflection.Metadata.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\vbc.exe
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\VBCSCompiler.exe
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\roslyn\VBCSCompiler.exe.config
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\SmartWeather.dll.config
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\SmartWeather.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\SmartWeather.pdb
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EntityFramework.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EntityFramework.SqlServer.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EPPlus.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\M2Mqtt.Net.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.Agent.Intercept.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.DependencyCollector.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.Web.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.WindowsServer.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.ApplicationInsights.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.Web.Infrastructure.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\MqttLib.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Newtonsoft.Json.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Net.Http.Formatting.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Helpers.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Http.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Http.WebHost.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Mvc.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Razor.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.Deployment.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.Razor.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EntityFramework.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EntityFramework.SqlServer.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\EPPlus.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\M2Mqtt.Net.pdb
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.DependencyCollector.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.Web.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.AI.WindowsServer.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.ApplicationInsights.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Newtonsoft.Json.pdb
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\Newtonsoft.Json.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Net.Http.Formatting.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Http.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Http.WebHost.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Razor.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.Deployment.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Webpages.Razor.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Helpers.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\bin\System.Web.Mvc.xml
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csproj.CoreCompileInputs.cache
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csproj.CopyComplete
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\obj\Debug\SmartWeather.dll
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\obj\Debug\SmartWeather.pdb
+D:\NSTDA\Weather Pollution\SmartWeather\SmartWeather\obj\Debug\SmartWeather.csprojAssemblyReference.cache

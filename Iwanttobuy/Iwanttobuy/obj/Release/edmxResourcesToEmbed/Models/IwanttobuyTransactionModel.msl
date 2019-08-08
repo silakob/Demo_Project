@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="topicsmartdeviceModelStoreContainer" CdmEntityContainer="IwanttobuyEntities">
+    <EntitySetMapping Name="IwanttobuyTransactions">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.IwanttobuyTransaction">
+        <MappingFragment StoreEntitySet="IwanttobuyTransaction">
+          <ScalarProperty Name="ProductState" ColumnName="ProductState" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Line_IG_Name" ColumnName="Line/IG_Name" />
+          <ScalarProperty Name="Necklace" ColumnName="Necklace" />
+          <ScalarProperty Name="Bracelet" ColumnName="Bracelet" />
+          <ScalarProperty Name="Earring" ColumnName="Earring" />
+          <ScalarProperty Name="Hairpin" ColumnName="Hairpin" />
+          <ScalarProperty Name="Ring" ColumnName="Ring" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Datetobuy" ColumnName="Datetobuy" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IwanttobuyCustomers">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.IwanttobuyCustomer">
+        <MappingFragment StoreEntitySet="IwanttobuyCustomer">
+          <ScalarProperty Name="NoOfLogin" ColumnName="NoOfLogin" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerPK" ColumnName="CustomerPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

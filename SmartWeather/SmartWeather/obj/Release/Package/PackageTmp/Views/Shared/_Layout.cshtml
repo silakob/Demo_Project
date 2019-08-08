@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title - Smart Weather 4.0</title>
+    @*<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="~/js/jquery-3.1.1.min.js"></script> @*สำคัญ*@
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="~/css/util.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/main.css" />
+    <!--===============================================================================================-->
+
+
+
+    @* --------------------------------------------------------------------------------------------------- *@
+    <link rel="apple-touch-icon" sizes="76x76" href="~/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="~/assets/img/favicon.png">
+    @*<link href="~/assets/styles.css" rel="stylesheet" />*@
+    <link href="~/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" />
+
+
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="~/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="~/assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+
+    
+</head>
+<body class="">
+    <div class="sidebar">
+        <!--
+            Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+        -->
+        <div class="sidebar-wrapper">
+            <p class="simple-text logo-mini text-center text-capitalize" style="font-size:13px; margin-top:10px;">Smart Weather Today</p>
+            <hr style="color:#525f7f;" />
+            <ul class="nav">
+                <li id="liDashboard">
+                    <a id="aDashboard" href="~/Home/Index">
+                        <i class="tim-icons icon-chart-pie-36"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li id="liMap">
+                    <a id="aMap" href="~/Home/Map">
+                        <i class="tim-icons icon-pin"></i>
+                        <p>Map</p>
+                    </a>
+                </li>
+                @*<li>
+                        <a href="./icons.html">
+                            <i class="tim-icons icon-atom"></i>
+                            <p>Icons</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./notifications.html">
+                            <i class="tim-icons icon-bell-55"></i>
+                            <p>Notifications</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./user.html">
+                            <i class="tim-icons icon-single-02"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./tables.html">
+                            <i class="tim-icons icon-puzzle-10"></i>
+                            <p>Table List</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./typography.html">
+                            <i class="tim-icons icon-align-center"></i>
+                            <p>Typography</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./rtl.html">
+                            <i class="tim-icons icon-world"></i>
+                            <p>RTL Support</p>
+                        </a>
+                    </li>
+                    <li class="active-pro">
+                        <a href="./upgrade.html">
+                            <i class="tim-icons icon-spaceship"></i>
+                            <p>Upgrade to PRO</p>
+                        </a>
+                    </li>*@
+            </ul>
+        </div>
+    </div>
+
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown">
+            <a href="#" data-toggle="dropdown">
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header-title"> Sidebar Background</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="badge-colors text-center">
+                            <span class="badge filter badge-primary active" data-color="primary"></span>
+                            <span class="badge filter badge-info" data-color="blue"></span>
+                            <span class="badge filter badge-success" data-color="green"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="adjustments-line text-center color-change">
+                    <span class="color-label">LIGHT MODE</span>
+                    <span class="badge light-badge mr-2"></span>
+                    <span class="badge dark-badge ml-2"></span>
+                    <span class="color-label">DARK MODE</span>
+                </li>
+                @*<li class="button-container">
+                        <a href="https://www.creative-tim.com/product/black-dashboard" target="_blank" class="btn btn-primary btn-block btn-round">Download Now</a>
+                        <a href="https://demos.creative-tim.com/black-dashboard/docs/1.0/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block btn-round">
+                            Documentation
+                        </a>
+                    </li>
+                    <li class="header-title">Thank you for 95 shares!</li>
+                    <li class="button-container text-center">
+                        <button id="twitter" class="btn btn-round btn-info"><i class="fab fa-twitter"></i> &middot; 45</button>
+                        <button id="facebook" class="btn btn-round btn-info"><i class="fab fa-facebook-f"></i> &middot; 50</button>
+                        <br>
+                        <br>
+                        <a class="github-button" href="https://github.com/creativetimofficial/black-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                    </li>*@
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div>
+        @RenderBody()
+
+        <hr />
+        <footer class="tm-footer text-center">
+            <p class="text-xs-center" style="font-size:large;">Copyright &copy; @DateTime.Now.Year Smart Weather 4.0 | Develope by Sila.K | Design by <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> for a better web.</p>
+        </footer>
+    </div>
+
+
+    <link href="~/css/sweetalert.css" rel="stylesheet" />
+    <script src="~/js/sweetalert-dev.js"></script>
+    <script src="~/js/sweetalert.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+
+    @if(TempData["Message"] != null)
+    {
+        <text>
+        $(window).load(function () {
+            $(document).ready(function () {
+                swal({
+                    title: "Smart Weather",
+                    text: "@TempData["Message"]",
+                    type: "@TempData["Type"]",
+                    confirmButtonColor: "lightskyblue"
+                });
+            });
+        });
+        </text>
+    }
+
+    </script>
+
+
+
+
+
+    <!--   Core JS Files   -->
+    <script src="~/assets/js/core/jquery.min.js"></script>
+    <script src="~/assets/js/core/popper.min.js"></script>
+    <script src="~/assets/js/core/bootstrap.min.js"></script>
+    <!-- Chart JS -->
+    <script src="~/assets/js/plugins/chartjs.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="~/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+    <!-- Black Dashboard DEMO methods, don't include it in your project! -->
+
+
+
+    <script src="~/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+
+
+
+
+    @*<script>
+            $('#aDashboard').click(function () {
+                window.location.href = 'Index';
+                var e1 = document.getElementById("liDashboard");
+                var e2 = document.getElementById("liMap");
+                e1.classList.add('active');
+                e2classList.remove('active');
+                event.preventDefault();
+
+            });
+            $('#aMap').click(function () {
+                window.location.href = 'Map';
+                document.getElementById("liMap").classList.add('active');
+                document.getElementById("liDashboard").classList.remove('active');
+                event.preventDefault();
+            });
+        </script>*@
+
+
+    <script>
+        $(document).ready(function () {
+            $().ready(function () {
+                $sidebar = $('.sidebar');
+                $navbar = $('.navbar');
+                $main_panel = $('.main-panel');
+
+                $full_page = $('.full-page');
+
+                $sidebar_responsive = $('body > .navbar-collapse');
+                sidebar_mini_active = true;
+                white_color = false;
+
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+                $('.fixed-plugin a').click(function (event) {
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .background-color span').click(function () {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data', new_color);
+                    }
+
+                    if ($main_panel.length != 0) {
+                        $main_panel.attr('data', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data', new_color);
+                    }
+                });
+
+                $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        sidebar_mini_active = false;
+                        blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+                    } else {
+                        $('body').addClass('sidebar-mini');
+                        sidebar_mini_active = true;
+                        blackDashboard.showSidebarMessage('Sidebar mini activated...');
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function () {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function () {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+                });
+
+                $('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
+                    var $btn = $(this);
+
+                    if (white_color == true) {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').removeClass('white-content');
+                        }, 900);
+                        white_color = false;
+                    } else {
+
+                        $('body').addClass('change-background');
+                        setTimeout(function () {
+                            $('body').removeClass('change-background');
+                            $('body').addClass('white-content');
+                        }, 900);
+
+                        white_color = true;
+                    }
+
+
+                });
+
+                $('.light-badge').click(function () {
+                    $('body').addClass('white-content');
+                });
+
+                $('.dark-badge').click(function () {
+                    $('body').removeClass('white-content');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

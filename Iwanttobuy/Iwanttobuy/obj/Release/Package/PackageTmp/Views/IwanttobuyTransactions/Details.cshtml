@@ -1,0 +1,113 @@
+﻿@model Iwanttobuy.Models.IwanttobuyTransaction
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>รายละเอียดการสั่งซื้อ</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("ชื่อลูกค้า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("ชื่อ Line / IG ลูกค้า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Line_IG_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("จำนวนสร้อยคอ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Necklace)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("จำนวนสร้อยข้อมือ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bracelet)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("จำนวนต่างหู")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Earring)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("จำนวนกิ๊บ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hairpin)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("จำนวนแหวน")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ring)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("ที่อยู่")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("วันที่สั่งซื้อ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datetobuy)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("ราคารวม")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("สถานะสินค้า")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductState)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("หมายเหตุ")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remark)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("แก้ไขข้อมูลนี้", "Edit", new { id = Model.TransactionID }) |
+    @Html.ActionLink("กลับไปหน้า รายการสั่งซื้อทั้งหมด", "Index")
+</p>

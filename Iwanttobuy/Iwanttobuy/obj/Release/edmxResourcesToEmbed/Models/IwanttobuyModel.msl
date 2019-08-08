@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="topicsmartdeviceModelStoreContainer" CdmEntityContainer="topicsmartdeviceEntities">
+    <EntitySetMapping Name="IwanttobuyCustomers">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.IwanttobuyCustomer">
+        <MappingFragment StoreEntitySet="IwanttobuyCustomer">
+          <ScalarProperty Name="CustomerPK" ColumnName="CustomerPK" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="NoOfLogin" ColumnName="NoOfLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IwanttobuyTransactions">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.IwanttobuyTransaction">
+        <MappingFragment StoreEntitySet="IwanttobuyTransaction">
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Line_IG_Name" ColumnName="Line/IG_Name" />
+          <ScalarProperty Name="Necklace" ColumnName="Necklace" />
+          <ScalarProperty Name="Bracelet" ColumnName="Bracelet" />
+          <ScalarProperty Name="Earring" ColumnName="Earring" />
+          <ScalarProperty Name="Hairpin" ColumnName="Hairpin" />
+          <ScalarProperty Name="Ring" ColumnName="Ring" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Datetobuy" ColumnName="Datetobuy" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="ProductState" ColumnName="ProductState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IwanttobuyProducts">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.IwanttobuyProduct">
+        <MappingFragment StoreEntitySet="IwanttobuyProduct">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ImgPath" ColumnName="ImgPath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="ProductPK" ColumnName="ProductPK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

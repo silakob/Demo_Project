@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-WebAPI-20190205063226.mdf;Initial Catalog=aspnet-WebAPI-20190205063226;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\silak\\Documents\\Visual\ Studio\ 2015\\Projects\\SmartWeather\\WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="topicsmartdeviceEntities-Web.config Connection String" description="topicsmartdeviceEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.ModelPM.csdl|res://*/Models.ModelPM.ssdl|res://*/Models.ModelPM.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=tcp:topicsmartdevice.database.windows.net,1433;initial catalog=topicsmartdevice;persist security info=True;user id=smartdevice;password=p@ssw0rd1212312121;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\silak\\Documents\\Visual\ Studio\ 2015\\Projects\\SmartWeather\\WebAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='topicsmartdeviceEntities']/@connectionString" />
+  </parameter>
+</parameters>

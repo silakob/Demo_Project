@@ -1,0 +1,172 @@
+﻿@model IEnumerable<Iwanttobuy.Models.IwanttobuyTransaction>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<style type="text/css">
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+</style>
+<link href="~/css/sb-admin.css" rel="stylesheet" />
+
+<div class="col-sm-12" style="background-color:white;">
+
+    @using (Html.BeginForm("Search", "IwanttobuyTransactions", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-sm-12 col-md-6 pull-left">
+                <h2>รายการสั่งซื้อทั้งหมด</h2>
+            </div>
+            <div class="col-sm-12 col-md-3" style="margin-top:20px;">
+                <!-- Navbar Search -->
+                <form class="d-none d-md-inline-block form-inline ml-auto">
+                    <div class="input-group text-right">
+                        @Html.Editor("txtSearch", new { htmlAttributes = new { @class = "form-control", placeholder = "ค้นหาชื่อลูกค้า" } })
+                        <div class="input-group-append">
+                            <input class="btn btn-success" type="submit" value="ค้นหา" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <p>
+            @Html.ActionLink("เพิ่ม +", "Create")
+        </p>
+
+        <table class="" id="customers" style="margin-bottom: 50px">
+            <tr>
+                <th>
+                    @Html.DisplayName("ชื่อลูกค้า")
+                </th>
+                <th>
+                    @Html.DisplayName("ชื่อ Line / IG ลูกค้า")
+                </th>
+                <th>
+                    @Html.DisplayName("จำนวนสร้อยคอ")
+                </th>
+                <th>
+                    @Html.DisplayName("จำนวนสร้อยข้อมือ")
+                </th>
+                <th>
+                    @Html.DisplayName("จำนวนต่างหู")
+                </th>
+                <th>
+                    @Html.DisplayName("จำนวนกิ๊บ")
+                </th>
+                <th>
+                    @Html.DisplayName("จำนวนแหวน")
+                </th>
+                <th>
+                    @Html.DisplayName("ที่อยู่")
+                </th>
+                <th>
+                    @Html.DisplayName("วันที่สั่งซื้อ")
+                </th>
+                <th>
+                    @Html.DisplayName("ราคารวม")
+                </th>
+                <th>
+                    @Html.DisplayName("สถานะสินค้า")
+                </th>
+                <th>
+                    @Html.DisplayName("หมายเหตุ")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line_IG_Name)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Necklace)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Bracelet)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Earring)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Hairpin)
+            </td>
+            <td style="text-align:right">
+                @Html.DisplayFor(modelItem => item.Ring)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datetobuy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            @if (item.ProductState == "ยังไม่ได้แพ็คของ")
+            {
+                <td style="background-color:red; color:white;">
+                    @Html.DisplayFor(modelItem => item.ProductState)
+                </td>
+            }
+            else if (item.ProductState == "แพ็คของแล้ว")
+            {
+                <td style="background-color:yellow;">
+                    @Html.DisplayFor(modelItem => item.ProductState)
+                </td>
+            }
+            else
+            {
+                <td style="background-color:green; color:white;">
+                    @Html.DisplayFor(modelItem => item.ProductState)
+                </td>
+            }
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TransactionID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TransactionID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TransactionID })
+            </td>
+        </tr>
+            }
+
+        </table>
+    }
+
+</div>

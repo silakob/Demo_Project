@@ -1,0 +1,74 @@
+﻿@model Iwanttobuy.Models.IwanttobuyProduct
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IwanttobuyProduct</h4>
+    <hr />
+
+    <div class="text-center">
+        <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]@Url.Content(Model.ImgPath)@Url.Content(Model.ImgName)" rel="prettyPhoto">
+            <img src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]@Url.Content(Model.ImgPath)@Url.Content(Model.ImgName)" width="250" height="250" />
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-2" style="margin-top:15px">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProductType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProductType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProductName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Quantity)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Price)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>               
+
+            </dl>
+        </div>
+        <div class="col-md-5">
+
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductPK }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

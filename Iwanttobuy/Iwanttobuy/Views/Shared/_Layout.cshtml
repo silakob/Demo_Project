@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Iwanttobuy_</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/animate.min.css" rel="stylesheet">
+    <link href="~/css/owl.carousel.css" rel="stylesheet">
+    <link href="~/css/owl.transitions.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/styles.css" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749075.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+</head>
+<body id="home" class="homepage" style='font-family: "Comfortaa","Sukhumvit","Helvetica Neue",Verdana,Arial,sans-serif;'>
+        <header id="header">
+            <nav id="main-menu" class="navbar navbar-default navbar-fixed-top" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]Home/Index">
+                            <img src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/logo2.jpg" width="169" height="57" alt="logo">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            @*<li>
+                                    <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600">รายการสินค้า</span>
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <div class="dropdown-menu" aria-labelledby="userDropdown" style="        background-color: darkgrey;">
+                                        <a class="dropdown-item" style="        color: #64686D;" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]IwanttobuyTransactions/Index">
+                                            <i class="fa fa-list fa-sm"></i>
+                                            รายการ order ทั้งหมด
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <br />
+                                        <a class="dropdown-item" style="        color: #64686D;" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]IwanttobuyTransactions/Create">
+                                            <i class="fa fa-shopping-bag fa-sm"></i>
+                                            สั่งของ
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <br />
+                                        <a class="dropdown-item" style="        color: #64686D;" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]IwanttobuyTransactions/Report">
+                                            <i class="fa fa-file fa-sm"></i>
+                                            รายงานทั้งหมด
+                                        </a>
+                                    </div>
+                                </li>*@
+                            <li class="scroll active"><a href="#home">หน้าแรก</a></li>
+                            <li class="scroll"><a href="#services">โปรโมชัน</a></li>
+                            <li class="scroll"><a href="#features">ช่องทางการชำระเงิน</a></li>
+                            <li class="scroll"><a href="#portfolio">สินค้าขายดี</a></li>
+                            <li class="scroll"><a href="#about">เกี่ยวกับเรา</a></li>
+                            <li class="scroll"><a href="#meet-team">ทีม</a></li>
+                            @*<li class="scroll"><a href="#pricing">แผนงาน</a></li>*@
+                            <li class="scroll"><a href="#get-in-touch">ติดต่อเรา</a></li>
+
+                            @if (Session["user"] == null)
+                            {
+                                <li>
+                                    <a class="btn" data-toggle="modal" data-target="#loginModal">
+                                        Sign In
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                Iwanttobuy.Models.IwanttobuyCustomer Obj = (Iwanttobuy.Models.IwanttobuyCustomer)Session["user"];
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown no-arrow">
+                                    <a class="nav-link dropdown-toggle user-hover" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                        @*@Html.DisplayFor(m => m.CustomerName)
+                                            @Html.DisplayFor(m => m.CustomerSurname)*@
+                                        <span>@Obj.CustomerName.ToString()</span>
+                                        <span>@Obj.CustomerSurname.ToString()</span>
+                                        <img class="img-profile rounded-circle" src="https://png.pngtree.com/svg/20160815/d6b988ce9e.png">
+                                    </a>
+                                    <!-- Dropdown - User Information -->
+                                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                        <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="fa fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Setting</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="fa fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log</a></li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" onclick="document.getElementById('myform').submit();"><i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i> Logout</a>
+                                        </li>
+
+                                    </ul>
+                                    <form id="myform" method="post" action="@System.Configuration.ConfigurationManager.AppSettings["HostName"]Home/Logout">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="name" value="value" />
+                                    </form>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div><!--/.container-->
+            </nav><!--/nav-->
+        </header><!--/header-->
+        @RenderBody()
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>&copy; @DateTime.Now.Year - @@Iwanttobuy_</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/IGIwanttobuy00/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                            <li><a href="https://www.instagram.com/iwanttobuy_/"><i class="fa fa-instagram fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/#footer-->
+        <!-- Modal Sign In -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                        <button type="button" class="close" style="" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                        {
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            @*@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })*@
+                                            @Html.Editor("LoginEmail", new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                @*@Html.EditorFor(model => model.TextPassword, new { htmlAttributes = new { @class = "form-control pwd", placeholder = "Password", type = "password" } })*@
+                                                @Html.Editor("LoginPassword", new { htmlAttributes = new { @class = "form-control pwd", placeholder = "Password", type = "password" } })
+                                                <span class="input-group-btn">
+                                                    <button class="btn reveal" type="button"><i class="glyphicon glyphicon-eye-open text-danger"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <input class="btn btn-primary" style="float:right;" type="submit" value="LOGIN" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <hr />
+
+                        @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-12">
+                                        <h5>Register</h5>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="form-group">
+                                            @Html.Editor("CustomerName", new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                                            @Html.ValidationMessage("CustomerName", "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.Editor("CustomerSurname", new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                                            @Html.ValidationMessage("CustomerSurname", "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.Editor("Email", new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                                            @Html.ValidationMessage("Email", "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                @Html.Editor("TextPassword", new { htmlAttributes = new { @class = "form-control pwd", placeholder = "Password", type = "password" } })
+                                                <span class="input-group-btn">
+                                                    <button class="btn reveal" type="button"><i class="glyphicon glyphicon-eye-open text-danger"></i></button>
+                                                </span>
+                                            </div>
+                                            @Html.ValidationMessage("TextPassword", "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.Editor("PhoneNo", new { htmlAttributes = new { @class = "form-control", placeholder = "Phone Number" } })
+                                            @Html.ValidationMessage("PhoneNo", "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="form-group">
+                                            @*@Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", rows = 4, placeholder = "Address" } })*@
+                                            @Html.TextArea("Address", new { @class = "form-control", rows = 4, placeholder = "Address" })
+                                            @Html.ValidationMessage("Address", "", new { @class = "text-danger" })
+                                        </div>
+
+                                        <input class="btn btn-primary" style="float:right;" type="submit" value="SUBMIT" />
+                                    </div>
+                                    <div class="col-md-3 col-sm-12">
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <link href="~/css/sweetalert.css" rel="stylesheet" />
+                <script src="~/js/sweetalert-dev.js"></script>
+                <script src="~/js/sweetalert.min.js"></script>*@
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet" /> <link href="https://cdn.jsdelivr.net/sweetalert2/6.4.3/sweetalert2.min.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/sweetalert2/latest/sweetalert2.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+        <script type="text/javascript">
+
+    @if(TempData["Message"] != null)
+    {
+        <text>
+        $(window).load(function () {
+            $(document).ready(function () {
+                swal({
+                    title: "@@Iwanttobuy_",
+                    text: "@TempData["Message"]",
+                    type: "@TempData["Type"]",
+                    confirmButtonColor: "lightskyblue"
+                });
+            });
+        });
+        </text>
+    }
+
+
+
+        $(".reveal").on('click',function() {
+    var $pwd = $(".pwd");
+    if ($pwd.attr('type') === 'password') {
+        $pwd.attr('type', 'text');
+    } else {
+        $pwd.attr('type', 'password');
+    }
+});
+        </script>
+
+        <script>
+        @*function logout() {
+        $.ajax({
+            url: '@System.Configuration.ConfigurationManager.AppSettings["HostName"]Home/Logout',
+            type: "POST"
+        });
+
+    }*@
+        </script>
+
+
+        <script src="~/js/jquery.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/mousescroll.js"></script>
+        <script src="~/js/smoothscroll.js"></script>
+        <script src="~/js/jquery.prettyPhoto.js"></script>
+        <script src="~/js/jquery.isotope.min.js"></script>
+        <script src="~/js/jquery.inview.min.js"></script>
+        <script src="~/js/wow.min.js"></script>
+        <script src="~/js/main.js"></script>
+    </body>
+</html>

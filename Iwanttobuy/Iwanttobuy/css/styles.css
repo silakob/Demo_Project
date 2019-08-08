@@ -1,0 +1,209 @@
+/*
+Template Name: HR2 - Template
+Version: 1.0
+Author: HostingRed SAS
+Author URL: http://hostingred.com
+*/
+/*******************************************
+USE THIS FILE TO INCLUDE YOUR OWN CSS STYLES
+********************************************/
+
+@font-face {
+    font-family: 'Sukhumvit';
+    /*src: url('fonts/sukhumvit-set/SukhumvitSet-Bold.ttf');
+  src: url('fonts/sukhumvit-set/SukhumvitSet-Light.ttf');*/
+    src: url('../fonts/SukhumvitSet-Medium.ttf') format('truetype');
+    /*src: url('fonts/sukhumvit-set/SukhumvitSet-SemiBold.ttf');
+  src: url('fonts/sukhumvit-set/SukhumvitSet-Text.ttf');
+  src: url('fonts/sukhumvit-set/SukhumvitSet-Thin.ttf');*/
+}
+
+p {
+    font-family: 'Comfortaa','Sukhumvit';
+    font-size:large;
+    font-weight:bold;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa','Sukhumvit';
+}
+
+a {
+    font-family: 'Comfortaa','Sukhumvit';
+    font-weight:100;
+}
+.dropdown-item:hover {
+    background: #404455;
+    font-weight: 600;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.img-profile {
+    height: 2rem;
+    width: 2rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+
+
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid rgba(255,255,255,0.24);
+    margin-bottom: 30px;
+}
+
+.input100 {
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px 0 38px;
+}
+
+/*---------------------------------------------*/
+.focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+    .focus-input100::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        background: #fff;
+    }
+
+    .focus-input100::after {
+        font-family: Material-Design-Iconic-Font;
+        font-size: 22px;
+        color: #fff;
+        content: attr(data-placeholder);
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 6px;
+        left: 0px;
+        padding-left: 5px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+.input100:focus {
+    padding-left: 5px;
+}
+
+    .input100:focus + .focus-input100::after {
+        top: -22px;
+        font-size: 18px;
+    }
+
+    .input100:focus + .focus-input100::before {
+        width: 100%;
+    }
+
+.has-val.input100 + .focus-input100::after {
+    top: -22px;
+    font-size: 18px;
+}
+
+.has-val.input100 + .focus-input100::before {
+    width: 100%;
+}
+
+.has-val.input100 {
+    padding-left: 5px;
+}
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+    position: relative;
+}
+
+.alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 2px;
+    padding: 4px 25px 4px 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    pointer-events: none;
+    font-family: Poppins-Regular;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+    content: "\f12a";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #c80000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 5px;
+}
+
+.alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .alert-validate::before {
+        visibility: visible;
+        opacity: 1;
+    }
+}

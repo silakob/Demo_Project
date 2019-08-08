@@ -1,0 +1,812 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+}
+
+<div class="wrapper">
+    <div class="main-panel">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <div class="navbar-toggle d-inline">
+                        <button type="button" class="navbar-toggler">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                        </button>
+                    </div>
+                    <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="dropdown nav-item">
+                            <div class="line-it-button" data-lang="th" data-type="friend" data-lineid="@@lineteamjp" style="height:100px;">
+                                <a href="https://line.me/R/ti/g/O7ZnfM7ccO" target="_blank"></a>
+                            </div>
+
+                            @Html.ActionLink("Export Excel File", "Home", "ExportExcel", null, new { @class = "btn btn-sm btn-primary btn-simple active" })
+                        </li>
+                        <li class="separator d-lg-none"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <a id="btn3h" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                3 Hours
+                            </a>
+                            <a id="btn6h" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                6 Hours
+                            </a>
+                            <a id="btn12h" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                12 Hours
+                            </a>
+                            <a id="btn1d" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                1 Day
+                            </a>
+                            <a id="btn3d" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                3 Days
+                            </a>
+                            <a id="btn1w" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                1 Week
+                            </a>
+                            <a id="btn2w" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                2 Weeks
+                            </a>
+                            <a id="btn1m" class="btn btn-sm btn-primary btn-simple active" style="text-decoration: underline; font-size:20px;">
+                                1 Month
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> PM 2.5 (µg/m³)</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart1" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> AQI</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart2" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> Temperature (°C)</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart3" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> Humidity (%)</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart4" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> All Charts</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart5" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="card card-chart">
+                        <div class="card-header">
+                            <h3 class="card-title text-center"> PM/AQI Min and Max values</h3>
+                        </div>
+                        <div class="card-body" style="height:550px;">
+                            <div class="chart-area" style="height:550px;">
+                                <div id="chart6" style="height: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var chart1serie, chart2serie, chart3serie, chart4serie;
+    var chartdata, chartminmax;
+    var minmax = new Array();
+    var seriesaqi = new Array();
+    var seriestemp = new Array();
+    var serieshum = new Array();
+    var seriespm = new Array();
+    var datemin, datemax = [];
+    var range;
+
+
+    var orderpairpm = new Array();
+    var orderpairaqi = new Array();
+    var orderpairtemp = new Array();
+    var orderpairhum = new Array();
+    var url = '../Home/Get3Hour';
+    /**
+     * Request data from the server, add it to the graph and set a timeout
+     * to request again
+     */
+    $("#btn3h").click(function () {
+        url = '../Home/Get3Hour';
+        CallAjax();
+    });
+    $("#btn6h").click(function () {
+        url = '../Home/Get6Hour';
+        CallAjax();
+    });
+    $("#btn12h").click(function () {
+        url = '../Home/Get12Hour';
+        CallAjax();
+    });
+    $("#btn1d").click(function () {
+        url = '../Home/Get1Day';
+        CallAjax();
+    });
+    $("#btn3d").click(function () {
+        url = '../Home/Get3Day';
+        CallAjax();
+    });
+    $("#btn1w").click(function () {
+        url = '../Home/Get1Week';
+        CallAjax();
+    });
+    $("#btn2w").click(function () {
+        url = '../Home/Get2Week';
+        CallAjax();
+    });
+    $("#btn1m").click(function () {
+        url = '../Home/Get1Month';
+        CallAjax();
+    });
+
+    $(document).ready(function () {
+        CallAjax();
+    });
+
+    function CallAjax() {
+        $.ajax({
+            url: url,
+            type: "POST",
+            datatype: 'json',
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                // add the point
+                seriespm = [];
+                seriesaqi = [];
+                seriestemp = [];
+                serieshum = [];
+                orderpairpm = [];
+                orderpairaqi = [];
+                orderpairtemp = [];
+                orderpairhum = [];
+                datemin = Date.parse(data[0].Time);
+                datemax = Date.parse(data[data.length-1].Time);
+                for (i = 0; i < data.length; ++i) {
+                    //var d = new Date(data[i].DateTime.substring(6, 19));
+                    debugger;
+                    var ok = Date.now();
+                    var d = Date.parse(data[i].Time);
+                    seriespm.push([data[i].Dust]);
+                    orderpairpm.push([d, data[i].Dust]);
+                    seriesaqi.push([data[i].AQI]);
+                    orderpairaqi.push([d, data[i].AQI]);
+                    seriestemp.push([data[i].Temp]);
+                    orderpairtemp.push([d, data[i].Temp]);
+                    serieshum.push([data[i].Hum]);
+                    orderpairhum.push([d, data[i].Hum]);
+                }
+
+                seriesArr = [{
+                    orderpairpm
+                }, {
+                    orderpairaqi
+                }, {
+                    orderpairtemp
+                }, {
+                    orderpairhum
+                }];
+
+                var a = seriespm.reduce(function (a, b) {
+                    return Math.min(a, b);
+                });
+                var b = seriespm.reduce(function (a, b) {
+                    return Math.max(a, b);
+                });
+                var c = seriesaqi.reduce(function (a, b) {
+                    return Math.min(a, b);
+                });
+                var d = seriesaqi.reduce(function (a, b) {
+                    return Math.max(a, b);
+                });
+                minmax = [];
+                if (d >= 300) {
+                    range = 500;
+                } else {
+                    range = 300;
+                }
+                minmax = [{
+                    "name": "Min PM 2.5 (µg/m³)",
+                    "y": a
+                }, {
+                    "name": "Max PM 2.5 (µg/m³)",
+                    "y": b
+                }, {
+                    "name": "Min AQI",
+                    "y": c
+                }, {
+                    "name": "Max AQI",
+                    "y": d
+                }];
+
+                //chart1serie.series[0].data[0].update({ x: time, y: seriespm });
+                requestPM(orderpairpm);
+                requestAQI(orderpairaqi);
+                requestTemp(orderpairtemp);
+                requestHum(orderpairhum);
+                requestAllChart(seriesArr);
+                requestMinMax(minmax);
+            },
+            cache: false
+        });
+    };
+
+
+    // -----------------------Dust Sensor-----------------------------------
+
+    function requestPM(series1) {
+        Highcharts.setOptions({
+            global: {
+                //timezoneOffset: 7 * 60
+                useUTC: false
+            }
+        });
+        chart1serie = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                renderTo: 'chart1',
+                zoomType: 'x',
+                backgroundColor: 'transparent'
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                title: {
+                    text: 'Time'
+                },
+                min: datemin,
+                max: datemax
+            },
+            yAxis: {
+                min: 0,
+                max: range,
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'PM 25 Value (µg/m³)',
+                    margin: 8
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    turboThreshold: 0//larger threshold or set to 0 to disable
+                }
+            },
+            series: [{
+                type: 'spline',
+                name: ' ',
+                data: series1,
+                zones: [{
+                    value: 50, // Values up to 10 (not including) ...
+                    color: '#009865' // ... have the color blue.
+                }, {
+                    value: 100, // Values up to 10 (not including) ...
+                    color: '#fddf33' // ... have the color blue.
+                }, {
+                    value: 150, // Values up to 10 (not including) ...
+                    color: '#ff9835' // ... have the color blue.
+                }, {
+                    value: 200, // Values up to 10 (not including) ...
+                    color: '#ce0031' // ... have the color blue.
+                }, {
+                    value: 300, // Values up to 10 (not including) ...
+                    color: '#68009a' // ... have the color blue.
+                }, {
+                    value: 400, // Values up to 10 (not including) ...
+                    color: '#7a0323' // ... have the color blue.
+                }, {
+                    color: '#800023' // Values from 10 (including) and up have the color red
+                }],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }]
+        });
+    };
+
+
+    function requestAQI(series2) {
+        Highcharts.setOptions({
+            global: {
+                timezoneOffset: -7 * 60
+            }
+        });
+        chart2serie = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                renderTo: 'chart2',
+                zoomType: 'x',
+                backgroundColor: 'transparent'
+                //events: {
+                //    load: requestData2
+                //}
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+
+                type: 'datetime',
+                title: {
+                    text: 'Time'
+                },
+                min: datemin,
+                max: datemax
+            },
+            yAxis: {
+                min: 0,
+                max: range,
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'AQI Value',
+                    margin: 8
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'spline',
+                name: ' ',
+                data: series2,
+                zones: [{
+                    value: 50, // Values up to 10 (not including) ...
+                    color: '#009865' // ... have the color blue.
+                }, {
+                    value: 100, // Values up to 10 (not including) ...
+                    color: '#fddf33' // ... have the color blue.
+                }, {
+                    value: 150, // Values up to 10 (not including) ...
+                    color: '#ff9835' // ... have the color blue.
+                }, {
+                    value: 200, // Values up to 10 (not including) ...
+                    color: '#ce0031' // ... have the color blue.
+                }, {
+                    value: 300, // Values up to 10 (not including) ...
+                    color: '#68009a' // ... have the color blue.
+                }, {
+                    value: 400, // Values up to 10 (not including) ...
+                    color: '#7a0323' // ... have the color blue.
+                }, {
+                    color: '#800023' // Values from 10 (including) and up have the color red
+                }],
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }]
+        });
+    };
+
+    // -----------------------Temperature Sensor----------------------------
+
+    function requestTemp(seriesArr) {
+        Highcharts.setOptions({
+            global: {
+                timezoneOffset: -7 * 60
+            }
+        });
+        chart3serie = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                renderTo: 'chart3',
+                zoomType: 'x',
+                backgroundColor: 'transparent'
+                //events: {
+                //    load: requestData3
+                //}
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                title: {
+                    text: 'Time',
+                    margin: 8
+                },
+                min: datemin,
+                max: datemax
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'Temperature Value (°C)',
+                    margin: 8
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, '#1d8cf8'],
+                            [1, '#F1F7FD']
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'spline',
+                name: ' ',
+                data: seriesArr,
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }]
+        });
+    };
+
+    // -----------------------Humidity Sensor-------------------------------
+
+    function requestHum(seriesArr) {
+        Highcharts.setOptions({
+            global: {
+                timezoneOffset: -7 * 60
+            }
+        });
+        chart4serie = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                renderTo: 'chart4',
+                zoomType: 'x',
+                backgroundColor: 'transparent'
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                title: {
+                    text: 'Time',
+                    margin: 8
+                },
+                min: datemin,
+                max: datemax
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'Humidity Value (%)',
+                    margin: 8
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                area: {
+                    fillColor: {
+                        linearGradient: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 0,
+                            y2: 1
+                        },
+                        stops: [
+                            [0, '#1d8cf8'],
+                            [1, '#F1F7FD']
+                        ]
+                    },
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 1
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                type: 'spline',
+                name: ' ',
+                data: seriesArr,
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }]
+        });
+    };
+
+    // -----------------------All Chart-------------------------------------
+
+    function requestAllChart(seriesArr) {
+        Highcharts.setOptions({
+            global: {
+                timezoneOffset: -7 * 60
+            }
+        });
+        chartdata = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                type: 'spline',
+                renderTo: 'chart5',
+                zoomType: 'x',
+                backgroundColor: 'transparent'
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+                type: 'datetime',
+                title: {
+                    text: 'Time',
+                    margin: 8
+                },
+                min: datemin,
+                max: datemax
+            },
+            yAxis: {
+                min: 0,
+                max: range,
+                minPadding: 0.2,
+                maxPadding: 0.2,
+                title: {
+                    text: 'Value',
+                    margin: 8
+                }
+            },
+            legend: {
+                enabled: true,
+                itemStyle: {
+                    color: 'green',
+                    fontSize: '15px'
+
+                },
+                itemHoverStyle: {
+                    color: '#FFF'
+                },
+                itemHiddenStyle: {
+                    color: '#444'
+                }
+            },
+            plotOptions: {
+                area: {
+                    marker: {
+                        radius: 2
+                    },
+                    lineWidth: 1,
+                    states: {
+                        hover: {
+                            lineWidth: 2
+                        }
+                    },
+                    threshold: null
+                }
+            },
+            series: [{
+                name: 'PM 2.5 (µg/m³)',
+                data: seriesArr[0].orderpairpm,
+                color: 'red',
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            },
+            {
+                name: 'AQI',
+                data: seriesArr[1].orderpairaqi,
+                color: 'orange',
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }, {
+                name: 'Temperature',
+                data: seriesArr[2].orderpairtemp,
+                color: 'yellow',
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }, {
+                name: 'Humidity',
+                data: seriesArr[3].orderpairhum,
+                color: '#1d8cf8',
+                dataLabels: {
+                    format: '<div style="text-align:center"><span style="font-size:25px;color:' +
+                        ((Highcharts.theme && Highcharts.theme.contrastTextColor) || 'silver') + '">{y}</span><br/>' +
+                           '<span style="font-size:12px;color:silver">°C</span></div>'
+                }
+            }]
+        });
+    };
+
+    // -----------------------Min Max-------------------------------------
+
+    function requestMinMax(seriesArr) {
+        chartminmax = new Highcharts.Chart({
+            chart: {
+                height: 500,
+                renderTo: 'chart6',
+                backgroundColor: 'transparent',
+                type: 'column'
+            },
+            title: {
+                text: '',
+                style: {
+                    color: 'silver'
+                }
+            },
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                min: 0,
+                max: 400,
+                title: {
+                    text: 'Values'
+                }
+
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                    borderWidth: 0,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.1f}'
+                    }
+                }
+            },
+
+            tooltip: {
+                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+            },
+
+            "series": [{
+                "colorByPoint": true,
+                data: seriesArr
+            }]
+        });
+    }
+
+</script>

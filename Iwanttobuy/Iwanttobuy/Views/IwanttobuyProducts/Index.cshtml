@@ -1,0 +1,157 @@
+﻿@model IEnumerable<Iwanttobuy.Models.IwanttobuyProduct>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+    <style type="text/css">
+        #customers {
+            /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #customers tr:hover {
+                background-color: #ddd;
+            }
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+    </style>
+    <link href="~/css/sb-admin.css" rel="stylesheet" />
+    <div class="col-md-12" style="background-color:white;">
+
+        @using (Html.BeginForm("Search", "IwanttobuyProducts", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-sm-12 col-md-6 pull-left">
+                    <h2>รายการสินค้าทั้งหมด</h2>
+                </div>
+                <div class="col-sm-12 col-md-3" style="margin-top:20px;">
+                    <!-- Navbar Search -->
+                    <form class="d-none d-md-inline-block form-inline ml-auto">
+                        <div class="input-group text-right">
+                            @Html.Editor("txtSearch", new { htmlAttributes = new { @class = "form-control", placeholder = "ค้นหาชื่อ ประเภท ราคา ของสินค้า" } })
+                            <div class="input-group-append">
+                                <input class="btn btn-success" type="submit" value="ค้นหา" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table" id="customers">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductType)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantity)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImgName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImgPath)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreateDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastUpdate)
+                    </th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+
+                        @if (item.Description == "หมด")
+                        {
+                            <td style="background-color:red; color:white;">
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                        }
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImgName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ImgPath)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreateDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastUpdate)
+                        </td>
+                        <td>
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]@item.ImgPath@item.ImgName" rel="prettyPhoto">
+                                <img src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]@item.ImgPath@item.ImgName" width="50" height="50" />
+                            </a>
+
+
+
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ProductPK }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ProductPK }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ProductPK })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+        </div>

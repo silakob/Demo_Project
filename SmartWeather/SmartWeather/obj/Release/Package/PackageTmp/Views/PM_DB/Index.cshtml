@@ -1,0 +1,79 @@
+﻿@model IEnumerable<SmartWeather.PM_DB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ThingName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dust)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AQI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lon)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThingName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dust)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AQI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lon)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.PM_PK }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.PM_PK }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PM_PK })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

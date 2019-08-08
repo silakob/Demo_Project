@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="topicsmartdeviceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PM_DB">
+          <Key>
+            <PropertyRef Name="PM_PK" />
+          </Key>
+          <Property Name="PM_PK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThingName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Time" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Dust" Type="float" />
+          <Property Name="AQI" Type="float" />
+          <Property Name="Temp" Type="float" />
+          <Property Name="Hum" Type="float" />
+          <Property Name="Lat" Type="float" />
+          <Property Name="Lon" Type="float" />
+          <Property Name="DateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserKey" />
+          </Key>
+          <Property Name="UserKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="PhoneNo" Type="varchar" MaxLength="15" />
+          <Property Name="Address" Type="varchar" MaxLength="512" />
+          <Property Name="UserType" Type="varchar" MaxLength="1" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifyDate" Type="datetime" />
+          <Property Name="NameAndSurname" Type="varchar" MaxLength="200" />
+          <Property Name="Active" Type="tinyint" />
+        </EntityType>
+        <EntityContainer Name="topicsmartdeviceModelStoreContainer">
+          <EntitySet Name="PM_DB" EntityType="Self.PM_DB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="topicsmartdeviceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PM_DB">
+          <Key>
+            <PropertyRef Name="PM_PK" />
+          </Key>
+          <Property Name="PM_PK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThingName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Time" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dust" Type="Double" />
+          <Property Name="AQI" Type="Double" />
+          <Property Name="Temp" Type="Double" />
+          <Property Name="Hum" Type="Double" />
+          <Property Name="Lat" Type="Double" />
+          <Property Name="Lon" Type="Double" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="topicsmartdeviceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PM_DB" EntityType="Self.PM_DB" />
+          <EntitySet Name="Users" EntityType="topicsmartdeviceModel.User" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserKey" />
+          </Key>
+          <Property Name="UserKey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="512" FixedLength="false" Unicode="false" />
+          <Property Name="UserType" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="3" />
+          <Property Name="NameAndSurname" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Byte" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="topicsmartdeviceModelStoreContainer" CdmEntityContainer="topicsmartdeviceEntities">
+          <EntitySetMapping Name="PM_DB">
+            <EntityTypeMapping TypeName="topicsmartdeviceModel.PM_DB">
+              <MappingFragment StoreEntitySet="PM_DB">
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="PM_PK" ColumnName="PM_PK" />
+                <ScalarProperty Name="ThingName" ColumnName="ThingName" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Dust" ColumnName="Dust" />
+                <ScalarProperty Name="AQI" ColumnName="AQI" />
+                <ScalarProperty Name="Temp" ColumnName="Temp" />
+                <ScalarProperty Name="Hum" ColumnName="Hum" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Lon" ColumnName="Lon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="topicsmartdeviceModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="NameAndSurname" ColumnName="NameAndSurname" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserKey" ColumnName="UserKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="topicsmartdeviceModelStoreContainer" CdmEntityContainer="topicsmartdeviceEntities">
+    <EntitySetMapping Name="PM_DB">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.PM_DB">
+        <MappingFragment StoreEntitySet="PM_DB">
+          <ScalarProperty Name="PM_PK" ColumnName="PM_PK" />
+          <ScalarProperty Name="ThingName" ColumnName="ThingName" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Dust" ColumnName="Dust" />
+          <ScalarProperty Name="AQI" ColumnName="AQI" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Hum" ColumnName="Hum" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

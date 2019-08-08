@@ -1,0 +1,1084 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .cover-img{
+        background-image: url('@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/cover2.png');
+        background-size: cover;
+    }
+</style>
+
+<div style='font-family: "Comfortaa","sukhumvit-regular","Helvetica Neue",Verdana,Arial,sans-serif;'>
+    <section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url('@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749071.jpg');">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2><span>@@</span>Iwanttobuy<span>_</span></h2>
+                                    <p style="font-size:large">เว็บไซต์จำหน่ายเครื่องประดับออนไลน์ที่น่าเชื่อถือและมั่นคงที่สุดในเวลานี้</p>
+                                    @if (Session["user"] == null)
+                                    {
+                                        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">สั่งเลย !!!</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-primary btn-lg" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]IwanttobuyTransactions/Index">สั่งเลย !!!</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url('@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749072.jpg');">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2 style="color: gray">กำไล <span>ต่างหู</span> แหวน <span>สร้อย</span></h2>
+                                    <p style="color: black; font-size:large">เครื่องประดับดีมีคุณภาพ <br>ราคาย่อมเยา <br>บริการชั้นเยี่ยม</p>
+                                    @if (Session["user"] == null)
+                                    {
+                                        <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">สั่งเลย !!!</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-primary btn-lg" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]IwanttobuyTransactions/Index">สั่งเลย !!!</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            @*<div class="item" style="background-image: url('@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749073.jpg');">
+                    <div class="slider-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h2 style="color: gray">This is Header <span>TEMPLATE</span></h2>
+                                        <p style="color: black"><b>label label label label label label label label label label label label label label label label label label label. </b></p>
+                                        <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+            @*<div class="item" style="background-image: url('@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749074.jpg');">
+                    <div class="slider-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="carousel-content">
+                                        <h2 style="color: gray">This is Header <span>TEMPLATE</span></h2>
+                                        <p style="color: black"><b>label label label label label label label label label label label label label label label label label label label. </b></p>
+                                        <a class="btn btn-primary btn-lg" href="#">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="cta" class="wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>@@Iwanttobuy_</h2>
+                    <p>
+                        กำไล,ต่างหู,แหวน,สร้อย
+                        <br>🧡มีราคาส่ง
+                        <br>‼️พร้อมโอนค่อยสั่ง‼️
+                        <br>❤️wallet,kbank,promtpay
+                        <br>❌ไม่มีปลายทาง,ไม่รับตัวแทน❌
+                        <br>💜ems40/ลทบ.25
+                    </p>
+                </div>
+                <div class="col-sm-3 text-right">
+                    @*<a class="btn btn-primary btn-lg" href="#">Reprehenderit Qui!</a>*@
+                </div>
+            </div>
+        </div>
+    </section><!--/#cta-->
+
+    <section id="services">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">โปรโมชัน</h2>
+                <p class="text-center wow fadeInDown"> กรุณาตรวจสอบโปรโมชันของท่านก่อนสั่งซื้อสินค้า เพื่อที่ท่านจะได้ไม่พลาดสิทธิที่ท่านควรจะได้รับ </p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-percent"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">โปร 1</h4>
+                                <p>ซื้อสินค้ามูลค่า 100 บาท จำนวน 2 ชิ้น ลดทันที 20 บาท เหลือเพียง <span style="color: #BE1414"><u>180</u></span> บาท เท่านั้น <br> <span style="color: red"><u>***เฉพาะสินค้าราคา 100 บาทเท่านั้น</u></span></p>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953867.jpg" alt="">
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953868.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-percent"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">โปร 2</h4>
+                                <p>สำหรับสินค้าที่เป็น <span style="color: #BE1414"><u>เงินแท้</u></span>  ฟรีค่าจัดส่งทันที <span style="color: #BE1414"><u>หรือ</u></span> รับกล่องของขวัญฟรีทันที</p><br>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953882.jpg" alt="">
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12">
+                                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953883.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                    <div class="col-md-2"></div>
+
+                    @*<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                            <div class="media service-box">
+                                <div class="pull-left">
+                                    <i class="fa fa-recycle"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Excepturi Sint</h4>
+                                    <p>Occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                            <div class="media service-box">
+                                <div class="pull-left">
+                                    <i class="fa fa-history"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Harum Quidem</h4>
+                                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->
+
+                        <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                            <div class="media service-box">
+                                <div class="pull-left">
+                                    <i class="fa fa-magic"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Placeat Facere</h4>
+                                    <p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis</p>
+                                </div>
+                            </div>
+                        </div><!--/.col-md-4-->*@
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms" style="color:black">@@Iwanttobuy_ @*<span>SED UT PERSPICIATIS UNDE OMNIS</span>*@</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms" style="color:black"><b>สินค้าเครื่องประดับนำเข้า ราคาย่อมเยาพร้อมให้คุณเป็นเจ้าของแล้ววันนี้ <b></p>
+                @*<p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Voluptatem Quia</a></p>*@
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">ช่องทางการชำระเงิน</h2>
+                <p class="text-center wow fadeInDown">สะดวก รวดเร็ว มั่นคง ปลอดภัย น่าเชื่อถือ</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/payment.jpg" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cc-visa"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">ธ. กสิกรไทย</h4>
+                            <p>
+                                เลขที่บัญชี : 053-8-13985-8 <br>
+                                กมลทิพย์ เกิดสมบุญ
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-credit-card"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">ธ. ไทยพาณิชย์</h4>
+                            <p>
+                                เลขที่บัญชี : 928-218585-8 <br>
+                                กมลทิพย์ เกิดสมบุญ
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-cc-mastercard"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">ธ. กรุงเทพ</h4>
+                            <p>
+                                เลขที่บัญชี : 942-7-01604-4 <br>
+                                ศิลา กอปรทศธรรม
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa"><img src="https://promptpay.bangkokbank.com/assets/icons/LogoPP.png" width="50" height="50" /></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">พร้อมเพย์</h4>
+                            <p>
+                                เบอร์โทรศัพย์ : 095-802-0302 <br>
+                                กมลทิพย์ เกิดสมบุญ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">สินค้าขายดี</h2>
+                <p class="text-center wow fadeInDown"> สินค้าขายดีที่สุด ผลิตจากประเทศจีน ซึ่งมีลูกค้าให้ความสนใจกันมากหน้าหลายตา พร้อมเป็นเจ้าของในราคาย่อมเยากับคุณภาพชั้นยอด</p>
+            </div>
+
+            <div class="text-center">
+                <ul class="portfolio-filter">
+                    <li><a class="active" href="#" data-filter="*">ทั้งหมด</a></li>
+                    <li><a href="#" data-filter=".filter1">สร้อยคอ</a></li>
+                    <li><a href="#" data-filter=".filter2">กำไลข้อมือ</a></li>
+                    <li><a href="#" data-filter=".filter3">กิ๊บ</a></li>
+                    <li><a href="#" data-filter=".filter4">แหวน & ต่างหู</a></li>
+
+                </ul><!--/#portfolio-filter-->
+            </div>
+
+            <div class="portfolio-items">
+                <div class="portfolio-item filter1 filter4">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953885.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อย+แหวนคทาเซเลอร์มูน (จำนวนจำกัด!!)</h3>
+                            🌸ราคา 120 บาท กล่อง+30 (ไม่ใช่เงินแท้)
+                            <br>🌸ขายเป็นเซ็ทไม่ขายแยก
+                            <br>🌸ขนาดsize แหวน 16.5 cm.
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953885.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter1">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953882.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยคอกาแลกซี่เงิน</h3>
+                            🌸เงินแท้95.2% (ใส่อาบน้ำได้!!)
+                            <br>🌸ราคาเส้นละ 200 บาท
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953882.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter1">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953883.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยคอกาแลกซี่สีRose Gold </h3>
+                            เงินแท้95.2% (ใส่อาบน้ำได้!!)
+                            <br>🔥🔥ราคาเส้นละ 200🔥🔥
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953883.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter1">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953888.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยคอเซเลอร์มูนซีรี่ย์</h3>
+                            🌸ราคาเส้นละ 99 บาท (ซื้อ3เส้น ส่งฟรี)
+                            <br>🌸เลือกแบบในแชทนะคะ
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953888.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter2">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749071.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>𝘚𝘮𝘪𝘭𝘦 𝘉𝘳𝘢𝘤𝘦𝘭𝘦𝘵 𝘚𝟫𝟤𝟧😊😊</h3>
+                            (ใส่อาบน้ำได้•เงินแท้•ไม่ลอก•ไม่ดำ)
+                            <br>🌸ราคาเส้นละ 300 บาท
+                            <br>🌸มีบริการเขียนโน้ตแฮปปี้เบิร์ธเดย์ฟรี
+                            <br>🌸มีกล่องใส่ให้ต่างหากคิดค่ากล่อง30 บาท
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749071.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter2">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953867.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยข้อมืออวกาศสีโรสโกลด์</h3>
+                            🌸ราคาเส้นละ 100 บาท (ไม่รวมกับโปร2เส้น180)
+                            <br>🌸ล๊อคให้สำหรับคนโอนแล้วเท่านั้น
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953867.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter2">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953868.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยข้อมืออวกาศสีเงิน</h3>
+                            🌸ราคาเส้นละ 100 บาท (ไม่รวมกับโปร2เส้น180)
+                            <br>🌸ล๊อคให้สำหรับคนโอนแล้วเท่านั้น
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953868.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter2">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953881.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>สร้อยข้อมือดีเทลหัวใจน่ารักสีหว๊านหวาน </h3>
+                            ลูกปัดเป็นวงกลมไม่แบนนะคะ มีคลิปรูปสุดท้ายจ้า !!
+                            <br>🌸ราคาsetละ 180 บาท
+                            <br>🌸จัดโปรซื้อ2set ส่งฟรีems!!
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953881.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter3">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953859.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>กิ๊บแมวเหมียวกาแลกซี่ </h3>
+                            <br>🌸ราคาsetละ 99 บาท
+                            <br>🌸ขายเป็นเซ็ทไม่ขายแยก !!
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953859.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter3">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953860.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>กิ๊บดอกซากุระ</h3>
+                            🌸ราคา ❌ดอกเล็กหมดจ้า❌ | ดอกใหญ่ 69 บาท
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953860.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter3">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953871.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>เข็มกลัดแมวเหมียว</h3>
+                            ❤️ สนใจพรีออเดอร์ได้นะคะ ราคา 49 บาท รอของ 15-20 วันค่ะ
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953871.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter4">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749075.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>แหวนมงกุฏมินิมอล สินค้าจำนวนจำกัด </h3>
+                            🌸ราคาวงละ 69 บาท
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8749075.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter4">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953873.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>แหวนหัวใจเพชรสวิสเม็ดแบบมินิมอล❤️❤️</h3>
+                            (ไม่ลอก•ไม่ดำ•เงินแท้•ใส่อาบน้ำได้)
+                            <br>🌸ราคาวงละ 99 บาท
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953873.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+
+                <div class="portfolio-item filter4">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953884.jpg" alt="">
+                        <div class="portfolio-info">
+                            <h3>ต่างหูอวกาศสีโรสโกลด์ (จำนวนจำกัด!!)</h3>
+                            🌸ราคา 69 บาท
+                            <br>🌸เลือกแบบในแชทนะคะ
+                            <a class="preview" href="@System.Configuration.ConfigurationManager.AppSettings["HostName"]image/S__8953884.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+                </div><!--/.portfolio-item-->
+            </div>
+        </div><!--/.container-->
+    </section><!--/#portfolio-->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">เกี่ยวกับเรา</h2>
+                @*<p class="text-center wow fadeInDown">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis<br>praesentium voluptatum deleniti atque corrupti quos dolores et quas</p>*@
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <h3 class="column-title">ตัวอย่างสินค้า</h3>
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/dQ-asV9HWbY" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight">
+                    <h3 class="column-title">ข้อมูลอย่างเป็นทางการ</h3>
+                    <h5 style="color: darkred;">@@Iwanttobuy_</h5><br>
+                    <p>Line @@ : <a href="https://line.me/R/ti/p/wwy3429c" target="_blank" style="color:dodgerblue"><u>@@Iwanttobuy_</u></a></p>
+                    <p>Instagram : <a href="https://www.instagram.com/iwanttobuy_/" target="_blank" style="color:dodgerblue"><u>Iwanttobuy_</u></a></p>
+                    <p>Facebook : <a href="https://www.facebook.com/IGIwanttobuy00/" target="_blank" style="color:dodgerblue"><u>Iwanttobuy_</u></a></p>
+
+                    <p>Call: 095-802-0302</p>
+
+                    @*<div class="row">
+                            <div class="col-sm-6">
+                                <ul class="nostyle">
+                                    <li><i class="fa fa-check-square"></i> Eaque ipsa quae ab</li>
+                                    <li><i class="fa fa-check-square"></i> Inventore veritatis</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <ul class="nostyle">
+                                    <li><i class="fa fa-check-square"></i> Architecto beatae vitae dicta</li>
+                                    <li><i class="fa fa-check-square"></i> Nemo enim ipsam</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-primary" href="#">Consequuntur magni</a>*@
+
+                </div>
+            </div>
+        </div>
+    </section><!--/#about-->
+
+    <section id="work-process">
+        <div class="container">
+            <div class="section-header">
+                @*<h4 class="section-title text-center wow fadeInDown">เรายังมีสินค้าที่คุณสนใจอีกมากมาย <br>เยี่ยมชมเพิ่มเติมได้ตามลิ้งค์ด้านล่าง</h4>*@
+                @*<p class="text-center wow fadeInDown">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit<br>laboriosam, nisi ut aliquid ex ea commodi consequatur?<br>Quis autem vel eum iure reprehenderit</p>*@
+            </div>
+
+            @*<div class="row text-center">
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                            <div class="icon-circle">
+                                <span>1</span>
+                                <i class="fa fa-area-chart fa-2x"></i>
+                            </div>
+                            <h3>VELIT</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                            <div class="icon-circle">
+                                <span>2</span>
+                                <i class="fa fa-binoculars fa-2x"></i>
+                            </div>
+                            <h3>QUAM</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                            <div class="icon-circle">
+                                <span>3</span>
+                                <i class="fa fa-coffee fa-2x"></i>
+                            </div>
+                            <h3>MOLESTIAE</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                            <div class="icon-circle">
+                                <span>4</span>
+                                <i class="fa fa-bullhorn fa-2x"></i>
+                            </div>
+                            <h3>EXPEDITA</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+                            <div class="icon-circle">
+                                <span>5</span>
+                                <i class="fa fa-certificate fa-2x"></i>
+                            </div>
+                            <h3>FUGIAT</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-4 col-xs-6">
+                        <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
+                            <div class="icon-circle">
+                                <span>6</span>
+                                <i class="fa fa-cogs fa-2x"></i>
+                            </div>
+                            <h3>LAUNCH</h3>
+                        </div>
+                    </div>
+                </div>*@
+        </div>
+    </section><!--/#work-process-->
+
+    <section id="meet-team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">ทีม</h2>
+                @*<p class="text-center wow fadeInDown">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<br>totam rem aperiam, eaque ipsa quae ab illo inventore veritati</p>*@
+            </div>
+
+            <div class="row" style="align-self:center;">
+                <div class="col-sm-6 col-md-2"></div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img">
+                            @*<img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_1-large.jpg" alt="">*@
+                            <img class="img-responsive img-circle" src="https://image.flaticon.com/icons/svg/194/194935.svg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>หวาย</h3>
+                            <span>ผู้ขาย</span>
+                        </div>
+                        @*<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>*@
+                        @*<ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>*@
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            @*<img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_2-large.jpg" alt="">*@
+                            <img class="img-responsive img-circle" src="https://image.flaticon.com/icons/svg/194/194938.svg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>ท๊อฟฟี่</h3>
+                            <span>ผู้ขาย</span>
+                        </div>
+                        @*<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>*@
+                        @*<ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>*@
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-2"></div>
+            </div>
+
+            @*<div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="team-img">
+                            <img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_3-large.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>พินิช พงษ์กสิกรรม</h3>
+                            <span>Driver</span>
+                        </div>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>*@
+
+
+            @*<div class="divider"></div>*@
+
+            @*<div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                            <div class="team-img">
+                                <img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_4-large.jpg" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3>พงพิพัฒษ์ เตชพันธ์</h3>
+                                <span>Driver</span>
+                            </div>
+
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                            <div class="team-img">
+                                <img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_5-large.jpg" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3>วรเชษฐ หงษ์ทอง</h3>
+                                <span>Driver</span>
+                            </div>
+
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                            <div class="team-img">
+                                <img class="img-responsive img-circle" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/drive_6-large.jpg" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3>เดชาธร จินาพันธ์</h3>
+                                <span>Driver</span>
+                            </div>
+
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>*@
+
+            @*<div class="divider"></div>*@
+
+            @*<div class="row">
+
+                    <div class="col-sm-4">
+                        <h3 class="column-title">Modi Tempora</h3>
+                        <div role="tabpanel">
+                            <ul class="nav main-tab nav-justified" role="tablist">
+                                <li role="presentation" class="active">
+                                    <a href="#tab1" role="tab" data-toggle="tab" aria-controls="tab1" aria-expanded="true">2010</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab2" role="tab" data-toggle="tab" aria-controls="tab2" aria-expanded="false">2011</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab3" role="tab" data-toggle="tab" aria-controls="tab3" aria-expanded="false">2013</a>
+                                </li>
+                                <li role="presentation">
+                                    <a href="#tab4" role="tab" data-toggle="tab" aria-controls="tab4" aria-expanded="false">2014</a>
+                                </li>
+                            </ul>
+                            <div id="tab-content" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade active in" id="tab1" aria-labelledby="tab1">
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    <p>velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero.</p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab2" aria-labelledby="tab2">
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    <p>velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero.</p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab3" aria-labelledby="tab3">
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    <p>velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero.</p>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tab4" aria-labelledby="tab3">
+                                    <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    <p>velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3 class="column-title">Similique Sunt</h3>
+                        <strong>Voluptas Sit Aspernatur</strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" data-width="90">85%</div>
+                        </div>
+                        <strong>Quia Consequuntur</strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" data-width="85">70%</div>
+                        </div>
+                        <strong>Neque Porro Quisquam</strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" data-width="95">90%</div>
+                        </div>
+                        <strong>Numquam Eius</strong>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" data-width="78">65%</div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <h3 class="column-title">Dignissimos</h3>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Ducimus qui blanditiis praesentium
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Nam libero tempore, cum soluta
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Nobis est eligendi optio cumque
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        Deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>*@
+        </div>
+    </section><!--/#meet-team-->
+
+
+    <div>
+        @*
+            <section id="animated-number">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title text-center wow fadeInDown">Impedit Quo Minus</h2>
+                        <p class="text-center wow fadeInDown">id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.<br>Temporibus autem quibusdam et aut officiis debitis aut</p>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                                <div class="animated-number" data-digit="1234" data-duration="1000"></div>
+                                <strong>Itaque Earum Rerum Hic</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                                <div class="animated-number" data-digit="3214" data-duration="1000"></div>
+                                <strong>Tenetur a Sapiente</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                                <div class="animated-number" data-digit="4123" data-duration="1000"></div>
+                                <strong>Aut Reiciendis</strong>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+                                <div class="animated-number" data-digit="2233" data-duration="1000"></div>
+                                <strong>Voluptatibus Maiores</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!--/#animated-number-->
+
+            <section id="pricing">
+                        <div class="container">
+                            <div class="section-header">
+                                <h2 class="section-title text-center wow fadeInDown">Our Plans</h2>
+                                <p class="text-center wow fadeInDown"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque<br>laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
+                                        <ul class="pricing">
+                                            <li class="plan-header">
+                                                <div class="price-duration">
+                                                    <span class="price">
+                                                        $15
+                                                    </span>
+                                                    <span class="duration">
+                                                        per year
+                                                    </span>
+                                                </div>
+
+                                                <div class="plan-name">
+                                                    Plan One
+                                                </div>
+                                            </li>
+                                            <li><strong>10</strong> EXCEPTURL</li>
+                                            <li><strong>120</strong> NIHIL</li>
+                                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
+                                            <li>LUSTO ODIMO ATQUE</li>
+                                            <li><strong>15</strong> RATIONE COLUPTATEM</li>
+                                            <li><strong>24/7</strong> SAPIENTE</li>
+                                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
+                                        <ul class="pricing featured">
+                                            <li class="plan-header">
+                                                <div class="price-duration">
+                                                    <span class="price">
+                                                        $28
+                                                    </span>
+                                                    <span class="duration">
+                                                        per year
+                                                    </span>
+                                                </div>
+
+                                                <div class="plan-name">
+                                                    Plan Two
+                                                </div>
+                                            </li>
+                                            <li><strong>10</strong> EXCEPTURL</li>
+                                            <li><strong>120</strong> NIHIL</li>
+                                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
+                                            <li>LUSTO ODIMO ATQUE</li>
+                                            <li><strong>15</strong> RATIONE COLUPTATEM</li>
+                                            <li><strong>24/7</strong> SAPIENTE</li>
+                                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
+                                        <ul class="pricing">
+                                            <li class="plan-header">
+                                                <div class="price-duration">
+                                                    <span class="price">
+                                                        $40
+                                                    </span>
+                                                    <span class="duration">
+                                                        per year
+                                                    </span>
+                                                </div>
+
+                                                <div class="plan-name">
+                                                    Plan Three
+                                                </div>
+                                            </li>
+                                            <li><strong>10</strong> EXCEPTURL</li>
+                                            <li><strong>120</strong> NIHIL</li>
+                                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
+                                            <li>LUSTO ODIMO ATQUE</li>
+                                            <li><strong>15</strong> RATIONE COLUPTATEM</li>
+                                            <li><strong>24/7</strong> SAPIENTE</li>
+                                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
+                                        <ul class="pricing">
+                                            <li class="plan-header">
+                                                <div class="price-duration">
+                                                    <span class="price">
+                                                        $58
+                                                    </span>
+                                                    <span class="duration">
+                                                        per year
+                                                    </span>
+                                                </div>
+
+                                                <div class="plan-name">
+                                                    Plan Four
+                                                </div>
+                                            </li>
+                                            <li><strong>10</strong> EXCEPTURL</li>
+                                            <li><strong>120</strong> NIHIL</li>
+                                            <li><strong>EXPEDITA</strong> DISCTINTO</li>
+                                            <li>LUSTO ODIMO ATQUE</li>
+                                            <li><strong>15</strong> RATIONE COLUPTATEM</li>
+                                            <li><strong>24/7</strong> SAPIENTE</li>
+                                            <li class="plan-purchase"><a class="btn btn-primary" href="#">GET NOW</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!--/#pricing-->
+
+                    <section id="testimonial">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+
+                                    <div id="carousel-testimonial" class="carousel slide text-center" data-ride="carousel">
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <p><img class="img-circle img-thumbnail" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/testimonial/01.jpg" alt=""></p>
+                                                <h4>Yetty L. Steven</h4>
+                                                <small>Nemo enim ipsam voluptatem quia voluptas sit</small>
+                                                <p>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est</p>
+                                            </div>
+                                            <div class="item">
+                                                <p><img class="img-circle img-thumbnail" src="@System.Configuration.ConfigurationManager.AppSettings["HostName"]images/testimonial/02.jpg" alt=""></p>
+                                                <h4>Gerry Munstons</h4>
+                                                <small>Itaque earum rerum hic tenetur a sapiente delectus</small>
+                                                <p>Ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Controls -->
+                                        <div class="btns">
+                                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="prev">
+                                                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="btn btn-primary btn-sm" href="#carousel-testimonial" role="button" data-slide="next">
+                                                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!--/#testimonial-->*@
+    </div>
+
+    <section id="get-in-touch">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">ติดต่อเรา</h2>
+                <p class="text-center wow fadeInDown">ท่านสามารถติดต่อเราผ่านทาง Instagram, Facebook และ Line@@ ตามลิ้งค์ด้านล่างนี้</p>
+            </div>
+        </div>
+    </section><!--/#get-in-touch-->
+
+
+    <section id="contact">
+        <div id="google-map" style=" height: 650px" data-latitude="13.8154262" data-longitude="100.5612977"></div>
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8">
+                        <div class="contact-form">
+                            <h3>Contact Info</h3>
+
+                            <address>
+                                <strong>@@Iwanttobuy_</strong><br>
+                                <p>Line @@ : <a href="https://line.me/R/ti/p/wwy3429c" target="_blank" style="color:dodgerblue"><u>@@Iwanttobuy_</u></a></p>
+                                <p>Instagram : <a href="https://www.instagram.com/iwanttobuy_/" target="_blank" style="color:dodgerblue"><u>Iwanttobuy_</u></a></p>
+                                <p>Facebook : <a href="https://www.facebook.com/IGIwanttobuy00/" target="_blank" style="color:dodgerblue"><u>Iwanttobuy_</u></a></p>
+                                <abbr title="Phone">คุณ ท๊อฟฟี่ (ผู้ขาย) : </abbr> 095-802-0302
+                            </address>
+
+                            @*<form id="main-contact-form" name="contact-form" method="post" action="contact-us.send.php">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" rows="8" placeholder="Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </form>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+</div>

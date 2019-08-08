@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="topicsmartdeviceModelStoreContainer" CdmEntityContainer="topicsmartdeviceEntities">
+    <EntitySetMapping Name="PM_DB">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.PM_DB">
+        <MappingFragment StoreEntitySet="PM_DB">
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="PM_PK" ColumnName="PM_PK" />
+          <ScalarProperty Name="ThingName" ColumnName="ThingName" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Dust" ColumnName="Dust" />
+          <ScalarProperty Name="AQI" ColumnName="AQI" />
+          <ScalarProperty Name="Temp" ColumnName="Temp" />
+          <ScalarProperty Name="Hum" ColumnName="Hum" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lon" ColumnName="Lon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="topicsmartdeviceModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="NameAndSurname" ColumnName="NameAndSurname" />
+          <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserKey" ColumnName="UserKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
